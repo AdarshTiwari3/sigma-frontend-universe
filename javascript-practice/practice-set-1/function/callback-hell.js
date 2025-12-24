@@ -37,7 +37,7 @@ function delay(ms) {
   const res = new Promise((resolve, reject) => {
     if (ms < 0) {
       reject(new Error("time can't be negative"));
-      return;
+      //   return;
     }
     setTimeout(resolve, ms);
   });
