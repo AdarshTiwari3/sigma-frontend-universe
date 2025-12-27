@@ -89,3 +89,35 @@ adminGreet();
 // It creates a NEW function.
 // does NOT affect greetObj.greet at all.
 greetObj.greet("XYZ"); // that's is reason it is allowed as original function remain unchanged
+
+// `this` in arrow function
+
+// arrow functions do not have their own this, they take the value of their lexical environmment/context where they are enclosed
+
+// Arrow function  → `this` depends on where it is written
+
+const obj = {
+  name: "John",
+  greet: () => {
+    console.log(this); // window object because arrow functions inherit this from the surrounding (global) lexical scope.
+    console.log(this.name); // it logs console.log(undefined) means no output
+  },
+};
+
+obj.greet();
+
+// this inside nested arrow function
+
+const obj2 = {
+  name: "John",
+  greet: function () {
+    const printName = () => {
+      console.log(this); // gives output {name: 'John', greet: ƒ}--> this === obj2 or arrow function printName takes this from its nearest enclosing normal function — greet() — and greet() was called on obj2.
+      console.log(this.name); // John because it using lexical context and greet is normal function or take `this` from their lexical (outer) scope
+    };
+    printName();
+  },
+};
+//Rule- Arrow function takes `this` from the nearest non-arrow function
+
+obj2.greet();
