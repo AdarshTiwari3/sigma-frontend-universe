@@ -130,3 +130,26 @@ console.log("Sum of myArr=", reduceAcc);
 myArr.forEach((element) => {
   console.log(element + 2);
 });
+
+// flat()- flattens nested arrays up to a specified depth and returns a new array
+
+const tempArry = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11]]];
+
+const flatArray = tempArry.flat(Infinity); // for infinity it checks all available depth
+
+console.log("Flat Array=", flatArray);
+/*
+Flat Array= [
+   1, 2, 3, 4,  5,
+   6, 7, 8, 9, 10,
+  11
+]
+  */
+
+//flatMap() -flatMap() is basically map() + flat(1) in one step
+
+const nums = [1, 2, 3, 4];
+
+const evensDoubled = nums.flatMap((n) => (n % 2 === 0 ? [n * 2] : []));
+
+console.log(evensDoubled); // [4, 8]
