@@ -94,3 +94,21 @@ const isBpresent = Object.hasOwn(p3, "b"); // this is better than other ways
 const isCpresent = p3.hasOwnProperty("c");
 
 console.log("isB=", isBpresent, "isC=", isCpresent);
+
+// object de-structuring
+// use the product object
+
+product["id"] = "abc112";
+product["product_name"] = "iPhone 17";
+product["year"] = 2025;
+product["serial_number"] = "1234badman";
+product.price = 100000;
+product["priceFormatted"] = (100000).toLocaleString("en-IN");
+
+console.log("Product=", product);
+
+// now de-structure the values
+
+const { product_name: productName, year, price } = product;
+
+console.log("product name=", productName, "year=", year, "price=", price); //product name= iPhone 17 year= 2025 price= 100000
