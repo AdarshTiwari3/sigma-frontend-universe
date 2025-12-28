@@ -180,3 +180,10 @@ const b = 43;
 
 const newArrayOF = Array.of(a, b); // [23 , 43] , returns new array
 console.log("newArrayOF=", newArrayOF);
+
+// array de structuring
+const arr1 = [10, 20, 30];
+
+const [a1, b1, c1] = arr1;
+
+console.log("output of destructuring=", a1, b1, c1); // 10 20 30
