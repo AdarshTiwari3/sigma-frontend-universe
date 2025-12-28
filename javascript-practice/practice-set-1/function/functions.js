@@ -91,6 +91,11 @@ const addition = (a, b) => a + b;
 console.log(addition(5,4));
 
 //Immediately Invoked Function Expressions IIFE- it avoids polluting global scope
-(function () {
+(function run() { 
+    //named IIFE, even if we remove the run name it will still work
   console.log("IIFE executed");
 })();
+
+((fun)=>{
+    console.log(`IIFE 2 ${fun}`) //IIFE 2 Function , it can take the params as well
+})("Function") // argument will be passed here
