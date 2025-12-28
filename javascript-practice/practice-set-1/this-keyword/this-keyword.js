@@ -121,3 +121,12 @@ const obj2 = {
 //Rule- Arrow function takes `this` from the nearest non-arrow function
 
 obj2.greet();
+
+
+// function checkThis(){
+//   const name="Andy"
+//   console.log("this=",this.name); //this does not work here as this is undefined here and can't access `name`
+        //this depends on how the function is called, not where it’s written.
+// }
+// checkThis()
+//this only refers to object properties, not function-scope variables.
