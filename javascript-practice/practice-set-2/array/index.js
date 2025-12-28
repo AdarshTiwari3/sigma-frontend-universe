@@ -174,3 +174,9 @@ JsArray= [
 
 const range = Array.from({ length: 5 }, (_, i) => i + 1);
 console.log(range); // [1, 2, 3, 4, 5]
+
+const a = 23;
+const b = 43;
+
+const newArrayOF = Array.of(a, b); // [23 , 43] , returns new array
+console.log("newArrayOF=", newArrayOF);
