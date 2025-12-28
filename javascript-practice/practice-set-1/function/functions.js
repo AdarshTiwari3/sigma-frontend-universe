@@ -89,3 +89,8 @@ outer()();
 // Arrow Function- An Arrow Function is a shorter and more concise way to write function expressions in JavaScript.
 const addition = (a, b) => a + b;
 console.log(addition(5,4))
+
+//Immediately Invoked Function Expressions IIFE- it avoids polluting global scope
+(function () {
+  console.log("IIFE executed");
+})();
