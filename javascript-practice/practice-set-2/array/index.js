@@ -153,3 +153,24 @@ const nums = [1, 2, 3, 4];
 const evensDoubled = nums.flatMap((n) => (n % 2 === 0 ? [n * 2] : []));
 
 console.log(evensDoubled); // [4, 8]
+
+// IsArray and from
+
+const isJavascript = Array.isArray("Javascript");
+console.log("Is-Js=", isJavascript); // false
+
+//convert this into an array
+
+const jsArray = Array.from("Javascript");
+
+console.log("JsArray=", jsArray);
+/*
+JsArray= [
+  'J', 'a', 'v', 'a',
+  's', 'c', 'r', 'i',
+  'p', 't'
+]
+  */
+
+const range = Array.from({ length: 5 }, (_, i) => i + 1);
+console.log(range); // [1, 2, 3, 4, 5]
