@@ -112,3 +112,12 @@ console.log("Product=", product);
 const { product_name: productName, year, price } = product;
 
 console.log("product name=", productName, "year=", year, "price=", price); //product name= iPhone 17 year= 2025 price= 100000
+
+
+// prototypal inheritance- we create out custom method or function which will be available with any objects here
+Object.prototype.greet=function(){ // never use in prod
+  console.log("hello object")
+}
+
+p1.greet() //hello object
+p3.greet() //hello object
