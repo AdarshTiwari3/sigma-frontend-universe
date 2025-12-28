@@ -124,3 +124,9 @@ console.log("Map multiply by 2=", mapMultiTwo); // Map multiply by 2= [ 2, 4, 6,
 const reduceAcc = myArr.reduce((acc, curr) => curr + acc, 0); // use accumulator, returns sum of the array
 
 console.log("Sum of myArr=", reduceAcc);
+
+// for each - it does something but does not return anything
+// usecase- Use forEach when your goal is side effects, not data transformation.
+myArr.forEach((element) => {
+  console.log(element + 2);
+});
