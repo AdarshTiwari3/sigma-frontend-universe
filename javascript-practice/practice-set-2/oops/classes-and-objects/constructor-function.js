@@ -45,3 +45,5 @@ class User {
   }
 }
   */
+
+// In short- A constructor function is like __init__ in Python — it initializes values on a newly created object.
