@@ -1,7 +1,8 @@
+import AppRouter from "@/router/app-router";
 function App() {
   return (
-    <div className="bg-slate-600 h-screen">
-      <p className="text-center">React Project</p>
+    <div className="bg-slate-700 h-screen">
+      <AppRouter />
     </div>
   );
 }
