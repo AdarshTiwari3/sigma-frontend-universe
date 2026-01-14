@@ -9,4 +9,5 @@ export const HOOKS_DATA: HookItem[] = [
   { id: 2, label: "useEffect", path: "use-effect" },
   { id: 3, label: "useRef", path: "use-ref" },
   { id: 4, label: "useMemo", path: "use-memo" },
+  { id: 5, label: "useCallback", path: "use-callback" },
 ];
