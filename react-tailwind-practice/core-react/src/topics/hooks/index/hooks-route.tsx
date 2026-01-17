@@ -6,6 +6,7 @@ import UseMemoDemo from "@/topics/hooks/use-memo-hook/use-memo-demo";
 import UseCallbackDemo from "@/topics/hooks/use-callback-hook/use-callback-demo";
 import UseContextDemo from "@/topics/hooks/use-context-hook/use-context-demo";
 import UseRefDemo from "@/topics/hooks/use-ref-hook/use-ref-demo";
+import UseReducerDemo from "@/topics/hooks/use-reducer-hook/use-reducer-demo";
 
 const HooksRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const HooksRoutes = () => {
       <Route path="use-callback" element={<UseCallbackDemo />} />
       <Route path="use-context" element={<UseContextDemo />} />
       <Route path="use-ref" element={<UseRefDemo />} />
+       <Route path="use-reducer" element={<UseReducerDemo />} />
     </Routes>
   );
 };
