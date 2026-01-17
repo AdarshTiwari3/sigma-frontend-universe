@@ -11,4 +11,6 @@ export const HOOKS_DATA: HookItem[] = [
   { id: 4, label: "useMemo", path: "use-memo" },
   { id: 5, label: "useCallback", path: "use-callback" },
   { id: 6, label: "useContext", path: "use-context" },
+  { id: 7, label: "useReducer", path: "use-reducer" },
+  { id: 8, label: "customHook", path: "custom-hook" },
 ];
