@@ -13,7 +13,7 @@ export interface CourseStore {
 }
 
 const courseStore: StateCreator<CourseStore> = (set) => ({
-  courses: [],
+  courses: [{ id: "1", title: "react-core" }],
 
   addCourse: (course: Course) => {
     set((state) => ({
