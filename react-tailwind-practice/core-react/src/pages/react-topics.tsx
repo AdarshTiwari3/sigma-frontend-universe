@@ -8,6 +8,7 @@ type Topic = {
 const topics: Topic[] = [
   { label: "Hooks in React", path: "/hooks" },
   { label: "Zustand Store", path: "/zustand-store" },
+  { label: "Redux Toolkit Store", path: "/redux-toolkit-store" },
 ];
 
 const ReactTopics = () => {
