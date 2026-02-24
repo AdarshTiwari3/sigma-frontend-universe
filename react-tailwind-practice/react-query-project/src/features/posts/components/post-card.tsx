@@ -1,10 +1,11 @@
 import type { Post } from "@/features/posts/types";
+import { memo } from "react";
 
 interface PostCardProps {
   post: Post;
 }
 
-export function PostCard({ post }: PostCardProps) {
+function PostCard({ post }: PostCardProps) {
   return (
     <div className="border rounded-xl p-4 shadow-sm">
       <h2 className="text-lg font-semibold capitalize">{post.title}</h2>
@@ -13,3 +14,5 @@ export function PostCard({ post }: PostCardProps) {
     </div>
   );
 }
+
+export default memo(PostCard);
