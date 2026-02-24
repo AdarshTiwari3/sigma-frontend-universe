@@ -1,5 +1,5 @@
 import type { Post } from "@/features/posts/types";
-import { PostCard } from "@/features/posts/components/post-card";
+import PostCard from "@/features/posts/components/post-card";
 
 interface PostListProps {
   posts: Post[];
