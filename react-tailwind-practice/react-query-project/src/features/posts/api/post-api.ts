@@ -1,5 +1,5 @@
 import { apiClient } from "@/lib/api/api-client";
-import type { Post } from "@/features/posts/types";
+import type { Post, CreatePostRequest } from "@/features/posts/types";
 
 /**
  * Fetch all posts from the posts endpoint.
@@ -18,5 +18,15 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPost(postId: number): Promise<Post> {
   const response = await apiClient.get<Post>(`${POSTS_ENDPOINT}/${postId}`);
+  return response.data;
+}
+
+/**
+ * Create a new post
+ */
+
+export async function createPost(data: CreatePostRequest): Promise<Post> {
+  const response = await apiClient.post(POSTS_ENDPOINT, data);
+
   return response.data;
 }
