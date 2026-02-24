@@ -1,5 +1,6 @@
 import { usePosts } from "@/features/posts/hooks/use-posts";
 import { PostList } from "@/features/posts/components/post-list";
+import { CreatePostForm } from "@/features/posts/components/create-post-form";
 
 const PostPage = () => {
   const { data, isLoading, isError, error } = usePosts();
@@ -34,6 +35,8 @@ const PostPage = () => {
       {!isLoading && !isError && data && data.length === 0 && (
         <div className="text-center text-gray-500 py-8">No posts found</div>
       )}
+
+      <CreatePostForm />
 
       {!isLoading && !isError && data && data.length > 0 && (
         <PostList posts={data} />

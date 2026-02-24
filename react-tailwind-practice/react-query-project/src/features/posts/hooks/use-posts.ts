@@ -22,7 +22,7 @@ export function usePost(postId: number) {
     queryKey: ["post", postId],
     queryFn: () => getPost(postId),
     enabled: !!postId, // prevents running if postId is undefined/null
-    // staleTime: 0,
-    // gcTime: 0,
+    // staleTime: 0, //controls when data becomes
+    // gcTime: 0, //controls when unused data is deleted from memory
   });
 }
